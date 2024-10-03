@@ -2,6 +2,8 @@
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDFwU0nYg-H9akm-ep3VAXrUJe3cj-PeQ",
@@ -17,5 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app); // Firestore 인스턴스 가져오기
+const storage = getStorage(app); // Storage 인스턴스 가져오기
 
-export { app, analytics, db };
+
+export { app, analytics, db ,storage };

@@ -21,7 +21,7 @@ export const useUserStore = defineStore('user', () => {
   // 서버로부터 전체 사용자 목록을 가져오는 함수
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:8089/api/login'); // 사용자 목록을 가져올 API 엔드포인트
+      const response = await axios.get('http://localhost:8089/api/memeber'); // 사용자 목록을 가져올 API 엔드포인트
       users.value = response.data; // 사용자 목록을 상태에 저장
     } catch (error) {
       console.error('Failed to fetch users:', error);
